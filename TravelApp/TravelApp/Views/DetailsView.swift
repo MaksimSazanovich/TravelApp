@@ -3,10 +3,14 @@
 import SwiftUI
 
 struct DetailsView: View {
+    var image: String
+    @Binding var path: NavigationPath
     var body: some View {
         VStack(alignment: .center, spacing: 30) {
 
-            DetailsPageHeader()
+            DetailsPageHeader(image: image) {
+                path.removeLast()
+            }
             
             VStack(alignment: .leading, spacing: 10) {
                 Text("Overview")
@@ -50,9 +54,11 @@ struct DetailsView: View {
 }
 
 struct DetailsPageHeader: View {
+    var image: String
+    var onBack: () -> Void
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image(.img1)
+            Image(image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 350, height: 380)
@@ -65,7 +71,7 @@ struct DetailsPageHeader: View {
             
             VStack(alignment: .leading) {
                 Button {
-                    //
+                    onBack()
                 } label: {
                     Circle()
                         .fill(.white)
@@ -135,8 +141,4 @@ struct GallerySectionView: View {
             }
         }
     }
-}
-
-#Preview {
-    DetailsView()
 }

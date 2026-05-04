@@ -6,7 +6,7 @@ enum Page: Hashable {
     case details(String)
 }
 
-struct ContentView: View {
+struct MainView: View {
     @State var path = NavigationPath()
     @State var text = ""
     var body: some View {
@@ -88,5 +88,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
 }

@@ -8,7 +8,7 @@ struct SectionHeader: View {
     var body: some View {
         HStack {
             Text(text)
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 22, weight: .bold))
             Spacer()
             Button {
                 action()

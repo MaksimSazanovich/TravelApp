@@ -56,11 +56,11 @@ struct ContentView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 16) {
                                CategoryCardView(image: "img1", title: "Pasir", subTitle: "Mesir")
-                                CategoryCardView(image: "img1", title: "Pasir", subTitle: "Mesir")
+                                CategoryCardView(image: "img1", title: "Очень длинный", subTitle: "Mesir")
                                 CategoryCardView(image: "img1", title: "Pasir", subTitle: "Mesir")
                                 CategoryCardView(image: "img1", title: "Pasir", subTitle: "Mesir")
                             }
-                            .frame(height: 80)
+                            .frame(height: 100)
                             .padding(.vertical, 20)
                             .padding(.horizontal, 30)
                         }

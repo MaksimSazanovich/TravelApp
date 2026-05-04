@@ -15,22 +15,8 @@ struct BigCardView: View {
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                Button {
-                    //
-                } label: {
-                    ZStack {
-                        Circle()
-                            .fill(.white)
-                            .frame(width: 35, height: 35)
-                        Image(systemName: "heart.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 18)
-                            .foregroundStyle(.red)
-                            
-                    }
-                }
-                .offset(x: -10, y: 10)
+                HeartButton()
+                    .offset(x: -10, y: 10)
             }
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
